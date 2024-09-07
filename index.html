@@ -1,11 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Website</title>
+  <link rel="stylesheet" href="Style/styles.css">
+  
+  
+
 </head>
 <body>
-    
+  
+  <!-- Header Section -->
+  <header>
+    <div class="header-container">
+      <div class="logo">WeatherSite</div>
+      <input type="text" id="search" placeholder="Search for a city...">
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Maps</a>
+        <a href="#">Alerts</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Weather Alert Section -->
+  <!-- <div class="alert-banner">
+    <span>⚠️ Severe Weather Alert: Thunderstorm Warning</span>
+    <button class="dismiss-btn">Dismiss</button>
+  </div> -->
+
+  <!-- Main Weather Display -->
+  <section class="weather-display">
+    <div class="location">
+      <h1>New York City, NY</h1>
+      <p>Tuesday, September 6, 2024</p>
+    </div>
+    <div class="current-weather">
+      <h2>72°F</h2>
+      <img src="weather-icon.png" alt="Sunny">
+      <p>Sunny</p>
+      <p>Feels Like: 75°F</p>
+      <p>Wind Speed: 5 mph</p>
+      <p>Humidity: 60%</p>
+      <p>Pressure: 1012 mb</p>
+    </div>
+  </section>
+
+  <!-- Forecast Section -->
+  <section class="forecast">
+    <h3>Hourly Forecast</h3>
+    <div class="hourly-forecast">
+      <div class="hour">
+        <p>1 PM</p>
+        <img src="weather-icon.png" alt="Sunny">
+        <p>70°F</p>
+      </div>
+      <!-- Repeat for each hour -->
+    </div>
+
+    <h3>Daily Forecast</h3>
+    <div class="daily-forecast">
+      <div class="day">
+        <p>Wednesday</p>
+        <img src="weather-icon.png" alt="Cloudy">
+        <p>High: 76°F / Low: 64°F</p>
+        <p>Precipitation: 10%</p>
+      </div>
+      <!-- Repeat for each day -->
+    </div>
+  </section>
+
+  <!-- Interactive Map Section -->
+  <section class="map">
+    <h3>Interactive Weather Map</h3>
+    <div id="map">Map Placeholder</div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-container">
+      <div>
+        <a href="#">Privacy Policy</a> | 
+        <a href="#">Terms of Service</a> | 
+        <a href="#">Contact</a>
+      </div>
+      <div class="social-icons">
+        <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+        <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+        <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
