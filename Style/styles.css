@@ -14,7 +14,7 @@ body {
   
   /* Header Styles */
   header {
-    background-color: #007BFF;
+    background-color: #0a0a0a;
     padding: 15px;
     color: white;
   }
@@ -51,8 +51,8 @@ body {
     margin-right: 100px;
   }
 
-    /* right 6 boxs  */
-
+    /* right 6 boxs and 3boxes  */
+    /* right 6 boxs */
     /* body {
       background-color: #1e1e1e;
       color: white;
@@ -96,10 +96,51 @@ body {
       background-color: #1e1e1e !important;
       color: white !important;
   }
-  
+  /* right 6 boxs */
+
+  /* right 3 boxs */
+/* Styles for the highlight boxes */
+.highlight-box {
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  color: white;
+  width: 100%;
+  max-width: 300px;
+}
+
+.Highlight1{
+  margin-bottom: 50px;
+}
+
+/* Icon styles */
+.highlight-icon {
+  margin-bottom: 10px;
+}
+
+/* Highlight text */
+.highlight-level {
+  font-weight: bold;
+  color: #f8d775;
+}
+
+/* Wind status font size */
+.wind-status {
+  font-size: 2.5rem;
+}
+
+/* Ensure all boxes stay in one row */
+.d-flex {
+  flex-wrap: nowrap;
+}
 
 
-      /* right 6 boxs  */ 
+
+  /* right 3 boxs */
+
+
+
+
+      /* right 6 boxs and 3boxes  */ 
 
  
   /* Alert Banner Styles */
@@ -124,7 +165,7 @@ body {
 .fullBox{
 display:flex;
 background-color:rgb(4, 4, 4);
-height: 600px;
+height: 753px;
 }
 
 .weather-icon{
