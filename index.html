@@ -1,28 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Weather Website</title>
   <link rel="stylesheet" href="Style/styles.css">
-  
-  
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
 
 </head>
+
 <body>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
   
-  <!-- Header Section -->
+    <!-- Header Section -->
   <header>
     <div class="header-container">
       <div class="logo">WeatherSite</div>
-      <input type="text" id="search" placeholder="Search for a city...">
+    
       <nav>
         <a href="#">Home</a>
         <a href="#">Maps</a>
-        <a href="#">Alerts</a>
+        <a class="alertnav" href="#">Alerts</a>
       </nav>
     </div>
   </header>
+
 
   <!-- Weather Alert Section -->
   <!-- <div class="alert-banner">
@@ -30,11 +41,127 @@
     <button class="dismiss-btn">Dismiss</button>
   </div> -->
 
+<div class="fullBox ">
+  <div class="leftBox">
+    <div class="card leftmain" style="width: 450px;">
+      <!-- <img src="..." class="card-img-top" alt="..."> -->
+      <div class="card-body">
+        <input type="text" id="search" placeholder="Search for a city...">
+        <img src="Img/img1.png" alt="Weather Icon" class="weather-icon mb-1">
+        <h2 class="mainF">72°C</h2>
+
+        <div class="cityRow">
+          <h1 class="mainC">New York </h1>
+          <p class="card-text mainCDay">Tuesday, September 6, 2024</p>
+        </div>
+
+        <p class="bar">-----------------------------------------------------------------</p>
+        <p class="card-text mainC">Time</p>
+       
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- right 6 boxs -->
+
+  <div class="container text-white">
+    <!-- Header Section with Settings and Dark Mode Toggle -->
+    <div class="d-flex justify-content-between align-items-center mt-4">
+        <h1 class="fw-bold">WHETHERSA</h1>
+        <div class="d-flex align-items-center">
+            <!-- Celsius and Fahrenheit Toggle -->
+            <div class="btn-group" role="group" aria-label="Temperature Unit">
+                <button type="button" class="btn btn-light">°C</button>
+                <button type="button" class="btn btn-dark">°F</button>
+            </div>
+            <!-- Light/Dark Mode Toggle -->
+            <button class="btn btn-light mx-2" id="darkModeToggle">
+                <i class="fas fa-sun"></i>
+            </button>
+            <!-- Settings Icon -->
+            <button class="btn btn-light">
+                <i class="fas fa-cog"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Weather Boxes Section -->
+    <div class="row mt-4">
+        <!-- Weather Box 1 -->
+        <div class="col-2">
+            <div class="weather-box bg-dark text-center p-3 rounded">
+                <p>Tue</p>
+                <img class="weather-iconb" src="Img/img 2 sun.png" alt="Cloudy" >
+                <p>12°C</p>
+            </div>
+        </div>
+        <!-- Weather Box 2 -->
+        <div class="col-2">
+            <div class="weather-box bg-dark text-center p-3 rounded">
+                <p>Wed</p>
+                <img src="Img/img 3.png" alt="Cloudy" class="weather-iconb">
+                <p>22°C</p>
+            </div>
+        </div>
+        <!-- Weather Box 3 -->
+        <div class="col-2">
+            <div class="weather-box bg-dark text-center p-3 rounded">
+                <p>Thu</p>
+                <img src="Img/img 4.png" alt="Cloudy" class="weather-iconb">
+                <p>1°C</p>
+            </div>
+        </div>
+        <!-- Weather Box 4 -->
+        <div class="col-2">
+            <div class="weather-box bg-dark text-center p-3 rounded">
+                <p>Fri</p>
+                <img src="Img/img 5.png" alt="Clear Night" class="weather-iconb">
+                <p>21°C</p>
+            </div>
+        </div>
+        <!-- Weather Box 5 -->
+        <div class="col-2">
+            <div class="weather-box bg-dark text-center p-3 rounded">
+                <p>Sat</p>
+                <img src="Img/img 6.png" alt="Thunderstorm" class="weather-iconb">
+                <p>6°C</p>
+            </div>
+        </div>
+        <!-- Weather Box 6 -->
+        <div class="col-2">
+            <div class="weather-box bg-dark text-center p-3 rounded">
+                <p>Mon</p>
+                <img src="Img/img 7.png" alt="Sunny" class="weather-iconb">
+                <p>8°C</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+   <!-- right 6 boxs -->
+    
+   
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <!-- Main Weather Display -->
-  <section class="weather-display">
+  <!-- <section class="weather-display">
     <div class="location">
       <h1>New York City, NY</h1>
-      <p>Tuesday, September 6, 2024</p>
+      <p >Tuesday, September 6, 2024</p>
     </div>
     <div class="current-weather">
       <h2>72°F</h2>
@@ -45,19 +172,19 @@
       <p>Humidity: 60%</p>
       <p>Pressure: 1012 mb</p>
     </div>
-  </section>
+  </section> -->
 
   <!-- Forecast Section -->
-  <section class="forecast">
+  <!-- <section class="forecast">
     <h3>Hourly Forecast</h3>
     <div class="hourly-forecast">
       <div class="hour">
         <p>1 PM</p>
         <img src="weather-icon.png" alt="Sunny">
         <p>70°F</p>
-      </div>
+      </div> -->
       <!-- Repeat for each hour -->
-    </div>
+    <!-- </div>
 
     <h3>Daily Forecast</h3>
     <div class="daily-forecast">
@@ -66,23 +193,27 @@
         <img src="weather-icon.png" alt="Cloudy">
         <p>High: 76°F / Low: 64°F</p>
         <p>Precipitation: 10%</p>
-      </div>
+      </div> -->
       <!-- Repeat for each day -->
-    </div>
-  </section>
+    <!-- </div>
+  </section> -->
 
   <!-- Interactive Map Section -->
-  <section class="map">
+  <!-- <section class="map">
     <h3>Interactive Weather Map</h3>
     <div id="map">Map Placeholder</div>
-  </section>
+  </section> -->
+
+
+
+
 
   <!-- Footer Section -->
-  <footer>
+  <!-- <footer>
     <div class="footer-container">
       <div>
-        <a href="#">Privacy Policy</a> | 
-        <a href="#">Terms of Service</a> | 
+        <a href="#">Privacy Policy</a> |
+        <a href="#">Terms of Service</a> |
         <a href="#">Contact</a>
       </div>
       <div class="social-icons">
@@ -91,6 +222,7 @@
         <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
       </div>
     </div>
-  </footer>
+  </footer> -->
 </body>
+
 </html>

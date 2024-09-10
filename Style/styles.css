@@ -26,23 +26,75 @@ body {
   }
   
   .logo {
+    margin-left: 50px;
     font-size: 1.5em;
     font-weight: bold;
   }
   
   #search {
     padding: 5px;
-    border-radius: 5px;
+    border-radius: 50px;
+    margin-left: 45px;
     border: none;
+    background-color:#000000;
+    width: 300px;
+    color: white;
   }
   
   nav a {
     margin-left: 20px;
+    margin-right: 40px;
     color: white;
   }
+
+  .alertnav {
+    margin-right: 100px;
+  }
+
+    /* right 6 boxs  */
+
+    /* body {
+      background-color: #1e1e1e;
+      color: white;
+      font-family: Arial, sans-serif;
+  } */
   
+  .weather-box {
+      background-color: #333;
+  }
+  
+  .weather-iconb {
+      max-width: 110px;
+      max-height: 110px;
+  }
+  
+  
+  .btn-light, .btn-dark {
+      border-radius: 50%;
+      font-size: 20px;
+  }
+  
+  #darkModeToggle i {
+      font-size: 20px;
+  }
+  
+  .dark-mode {
+      background-color: #ffffff !important;
+      color: #000000 !important;
+  }
+  
+  .light-mode {
+      background-color: #1e1e1e !important;
+      color: white !important;
+  }
+  
+
+
+      /* right 6 boxs  */ 
+
+ 
   /* Alert Banner Styles */
-  .alert-banner {
+  /* .alert-banner {
     background-color: #ffcc00;
     color: #333;
     padding: 10px;
@@ -57,15 +109,74 @@ body {
     color: #333;
     font-size: 1em;
     cursor: pointer;
-  }
+  } */
+
+
+.fullBox{
+display:flex;
+background-color:yellow;
+height: 600px;
+}
+
+.weather-icon{
+  width: 350px;
+  height: 350px;
+}
+
+.mainF{
+  font-size: 130px;
+  margin-left: 50px;
+  color: white;
+}
+
+.mainC{
+  font-size: 35px;
+  flex: 50%; 
+  color: white;
+}
+
+.cityRow{
+  display: flex;
+  
+  flex: 50%;
+}
+
+.mainCDay{
+  margin-top: 15px;
+  color: white;
+}
+
+.leftmain{
+  margin-left: 15px;
+  margin-top: 15px;
+  
+}
+
+.bar{
+  color: white;
+}
+
+.card-body{
+  background-color: #161616;
+  border-radius: 9px;
+}
+
+
+
+
+
+
+  
+
+
   
   /* Weather Display Styles */
-  .weather-display {
+  /* .weather-display {
     padding: 20px;
     text-align: center;
   }
-  
-  .current-weather {
+   */
+  /* .current-weather {
     display: inline-block;
     margin-top: 10px;
   }
@@ -73,8 +184,8 @@ body {
   .current-weather img {
     width: 100px;
     height: 100px;
-  }
-  
+  } */
+/*   
   .forecast {
     padding: 20px;
   }
@@ -82,15 +193,15 @@ body {
   .hourly-forecast, .daily-forecast {
     display: flex;
     overflow-x: auto;
-  }
+  } */
   
-  .hour, .day {
+  /* .hour, .day {
     margin-right: 15px;
     text-align: center;
   }
-  
+   */
   /* Map Section */
-  .map {
+  /* .map {
     padding: 20px;
     text-align: center;
   }
@@ -102,8 +213,8 @@ body {
     border: 1px solid #ccc;
     margin-top: 10px;
   }
-  
-  /* Footer Styles */
+   */
+  /* Footer Styles
   footer {
     background-color: #333;
     color: white;
@@ -115,11 +226,11 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
+  } */
   
-  .social-icons img {
+  /* .social-icons img {
     width: 24px;
     height: 24px;
     margin: 0 10px;
   }
-  
+   */
