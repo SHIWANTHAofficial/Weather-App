@@ -15,12 +15,7 @@
 </head>
 
 <body>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-    crossorigin="anonymous"></script>
+  
   
     <!-- Header Section -->
   <header>
@@ -48,16 +43,26 @@
       <!-- <img src="..." class="card-img-top" alt="..."> -->
       <div class="card-body">
         <input type="text" id="search" placeholder="Search for a city...">
-        <img src="Img/img1.png" alt="Weather Icon" class="weather-icon mb-1">
-        <h2 class="mainF">72°C</h2>
+        <img id="Mainwiconone" src="Img/img1.png" alt="Weather Icon" class="weather-icon mb-1">
+
+        <div class="cfvalue">
+          <h2 id="MTempValue" class="mainF">72°C </h2>
+          <h2 class="mainF2">°C</h2>
+        </div>
+       
+        
 
         <div class="cityRow">
-          <h1 class="mainC">New York </h1>
-          <p class="card-text mainCDay">Tuesday, September 6, 2024</p>
+          <h1 id="MLocationName" class="mainC">New York </h1>
+          <p id="nowdateclocation" class="card-text mainCDay">Tuesday, September 6, 2024</p>
         </div>
-
+       
         <p class="bar">-----------------------------------------------------------------</p>
+       <div class="Mantimebox">
         <p class="card-text mainC">Time</p>
+        <p id="nowtimeclocation"  class="card-text mainC">Time</p>
+       </div>
+        
        
         
       </div>
@@ -93,55 +98,55 @@
     </div>
 
     <!-- Weather Boxes Section -->
-    <div class="row mt-4">
+    <div class="row mt-4" id="weather-container">
         <!-- Weather Box 1 -->
-        <div class="col-2">
+        <!-- <div class="col-2">
             <div class="weather-box bg-dark text-center p-3 rounded">
                 <p>Tue</p>
                 <img class="weather-iconb" src="Img/img 2 sun.png" alt="Cloudy" >
                 <p>12°C</p>
             </div>
-        </div>
+        </div> -->
         <!-- Weather Box 2 -->
-        <div class="col-2">
+        <!-- <div class="col-2">
             <div class="weather-box bg-dark text-center p-3 rounded">
                 <p>Wed</p>
                 <img src="Img/img 3.png" alt="Cloudy" class="weather-iconb">
                 <p>22°C</p>
             </div>
-        </div>
+        </div> -->
         <!-- Weather Box 3 -->
-        <div class="col-2">
+        <!-- <div class="col-2">
             <div class="weather-box bg-dark text-center p-3 rounded">
                 <p>Thu</p>
                 <img src="Img/img 4.png" alt="Cloudy" class="weather-iconb">
                 <p>1°C</p>
             </div>
-        </div>
+        </div> -->
         <!-- Weather Box 4 -->
-        <div class="col-2">
+        <!-- <div class="col-2">
             <div class="weather-box bg-dark text-center p-3 rounded">
                 <p>Fri</p>
                 <img src="Img/img 5.png" alt="Clear Night" class="weather-iconb">
                 <p>21°C</p>
             </div>
-        </div>
+        </div> -->
         <!-- Weather Box 5 -->
-        <div class="col-2">
+        <!-- <div class="col-2">
             <div class="weather-box bg-dark text-center p-3 rounded">
                 <p>Sat</p>
                 <img src="Img/img 6.png" alt="Thunderstorm" class="weather-iconb">
                 <p>6°C</p>
             </div>
-        </div>
+        </div> -->
         <!-- Weather Box 6 -->
-        <div class="col-2">
+        <!-- <div class="col-2">
             <div class="weather-box bg-dark text-center p-3 rounded">
                 <p>Mon</p>
                 <img src="Img/img 7.png" alt="Sunny" class="weather-iconb">
                 <p>8°C</p>
             </div>
-        </div>
+        </div> -->
     </div>
 
 <!-- right 6 boxs -->
@@ -166,7 +171,11 @@
               <i class="fas fa-wind fa-3x"></i>
           </div>
           <h5>Wind Status</h5>
-          <p class="wind-status">7.70 <span>km/h</span></p>
+          <div class="windbox">
+            <p id="windsn0w" class="wind-status">7.70 </p>
+            <span>km/h</span>
+          </div>
+          
       </div>
 
       <!-- Sunrise & Sunset Box -->
@@ -212,6 +221,7 @@
 
 
   <!-- Main Weather Display -->
+
   <!-- <section class="weather-display">
     <div class="location">
       <h1>New York City, NY</h1>
@@ -229,41 +239,42 @@
   </section> -->
 
   <!-- Forecast Section -->
-  <!-- <section class="forecast">
+
+  <section class="forecast">
     <h3>Hourly Forecast</h3>
     <div class="hourly-forecast">
       <div class="hour">
         <p>1 PM</p>
-        <img src="weather-icon.png" alt="Sunny">
+        <!--  <img src="weather-icon.png" alt="Sunny">-->
         <p>70°F</p>
-      </div> -->
+      </div>
       <!-- Repeat for each hour -->
-    <!-- </div>
+    </div>
 
     <h3>Daily Forecast</h3>
     <div class="daily-forecast">
       <div class="day">
         <p>Wednesday</p>
-        <img src="weather-icon.png" alt="Cloudy">
+        <!--  <img src="weather-icon.png" alt="Cloudy"> -->
         <p>High: 76°F / Low: 64°F</p>
         <p>Precipitation: 10%</p>
-      </div> -->
+      </div>
       <!-- Repeat for each day -->
-    <!-- </div>
-  </section> -->
+    </div>
+  </section>
 
   <!-- Interactive Map Section -->
-  <!-- <section class="map">
+  <section class="map">
     <h3>Interactive Weather Map</h3>
     <div id="map">Map Placeholder</div>
-  </section> -->
+  </section>
 
-
+ <!-- Interactive Map Section -->
 
 
 
   <!-- Footer Section -->
-  <!-- <footer>
+  <footer>
     <div class="footer-container">
       <div>
         <a href="#">Privacy Policy</a> |
@@ -271,12 +282,22 @@
         <a href="#">Contact</a>
       </div>
       <div class="social-icons">
-        <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
-        <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
-        <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+       <!--  <a href="#"><img src="facebook-icon.png" alt="Facebook"></a> -->
+       <!--  <a href="#"><img src="twitter-icon.png" alt="Twitter"></a> -->
+        <!-- <a href="#"><img src="instagram-icon.png" alt="Instagram"></a> -->
       </div>
     </div>
-  </footer> -->
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+    <script src="./Sever/sever.js"></script>
+
+   
 </body>
 
 </html>

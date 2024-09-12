@@ -93,9 +93,12 @@ body {
   }
   
   .light-mode {
-      background-color: #1e1e1e !important;
+      background-color: rgb(4, 4, 4) !important;
       color: white !important;
   }
+
+
+
   /* right 6 boxs */
 
   /* right 3 boxs */
@@ -164,7 +167,7 @@ body {
 
 .fullBox{
 display:flex;
-background-color:rgb(4, 4, 4);
+/* background-color:rgb(4, 4, 4); */
 height: 753px;
 }
 
@@ -173,10 +176,26 @@ height: 753px;
   height: 350px;
 }
 
+.cfvalue{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+
 .mainF{
   font-size: 130px;
-  margin-left: 50px;
+  /* margin-left: 20px; */
+  
   color: white;
+  /* flex: 20%;  */
+
+}
+.mainF2{
+  font-size: 130px;
+  /* margin-left: 90px; */
+  color: white;
+  /* flex: 20%;  */
+
 }
 
 .mainC{
@@ -206,6 +225,23 @@ height: 753px;
   color: white;
 }
 
+.Mantimebox{
+display: flex;
+
+}
+
+/* winndstatusbox */
+.windbox{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+/* winndstatusbox */
+
+
+
+
 .card-body{
   background-color: #161616;
   border-radius: 9px;
@@ -224,18 +260,18 @@ height: 753px;
   /* .weather-display {
     padding: 20px;
     text-align: center;
-  }
-   */
+  } */
+  
   /* .current-weather {
     display: inline-block;
     margin-top: 10px;
   }
-  
-  .current-weather img {
+   */
+  /* .current-weather img {
     width: 100px;
     height: 100px;
   } */
-/*   
+  
   .forecast {
     padding: 20px;
   }
@@ -243,15 +279,17 @@ height: 753px;
   .hourly-forecast, .daily-forecast {
     display: flex;
     overflow-x: auto;
-  } */
+  }
   
-  /* .hour, .day {
+  .hour, .day {
     margin-right: 15px;
     text-align: center;
   }
-   */
+  
+
+
   /* Map Section */
-  /* .map {
+  .map {
     padding: 20px;
     text-align: center;
   }
@@ -263,8 +301,8 @@ height: 753px;
     border: 1px solid #ccc;
     margin-top: 10px;
   }
-   */
-  /* Footer Styles
+  
+  Footer Styles
   footer {
     background-color: #333;
     color: white;
@@ -276,11 +314,11 @@ height: 753px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-  } */
+  }
   
-  /* .social-icons img {
+  .social-icons img {
     width: 24px;
     height: 24px;
     margin: 0 10px;
   }
-   */
+  
