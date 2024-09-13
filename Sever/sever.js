@@ -18,27 +18,7 @@ function getUserLocation() {
       .then(data => {
         // Your weather data processing code here...
 
-        const latitude = data.location.lat;
-        const longitude = data.location.lon;
-
-        // Check if the map is already initialized
-        if (!map) {
-          // Initialize the map only if it hasn't been initialized yet
-          map = L.map('map').setView([latitude, longitude], 10);
-
-          // Add the tile layer to the map
-          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 18,
-          }).addTo(map);
-
-          // Add a marker to the map
-          L.marker([latitude, longitude]).addTo(map)
-            .bindPopup(`<b>${data.location.name}</b><br>Current Weather: ${data.current.temp_c}°C`)
-            .openPopup();
-        } else {
-          // If the map is already initialized, just set the new view
-          map.setView([latitude, longitude], 10);
-        }
+       
       })
       .catch(error => {
         console.error('Error fetching data:', error);
