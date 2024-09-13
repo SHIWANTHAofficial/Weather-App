@@ -1,5 +1,5 @@
 
-let map; // Declare the map variable outside
+
 
 function getUserLocation() {
   document.getElementById("searchBtn").addEventListener('click', () => {
@@ -17,7 +17,47 @@ function getUserLocation() {
       })
       .then(data => {
         // Your weather data processing code here...
+        const dateStr = data.location.localtime;
+        const date = new Date(dateStr);
 
+        const formattedDate = date.toLocaleString('en-US', {
+          weekday: 'long',   // Tuesday
+          year: 'numeric',   // 2024
+          month: 'long',     // September
+          day: 'numeric',    // 12
+        });
+
+        const formattedTime = date.toLocaleString('en-US', {
+          hour: '2-digit',   // 04
+          minute: '2-digit', // 06
+          hour12: true       // 12-hour format
+        });
+
+        // Update HTML elements with weather data
+        document.getElementById("MLocationName").innerHTML = data.location.name;
+        document.getElementById("Rehiontxt").innerHTML = data.location.region;
+        document.getElementById("MTempValue").innerHTML = data.current.temp_c;
+        document.getElementById("nowdateclocation").innerHTML = formattedDate;
+        document.getElementById("nowtimeclocation").innerHTML = formattedTime;
+        document.getElementById("Mainwiconone").src = data.current.condition.icon;
+        document.getElementById("windsn0w").innerHTML = data.current.wind_kph;
+        document.getElementById("sunrise3box").innerHTML = data.forecast.forecastday[0].astro.sunrise;
+        document.getElementById("sunset3box").innerHTML = data.forecast.forecastday[0].astro.sunset;
+
+        // Update the weather boxes for the next 6 days
+        const forecast = data.forecast.forecastday;
+        forecast.forEach((day, index) => {
+          if (index >= 6) return;
+
+          const dayDateId = `day${index + 1}-date`;
+          const dayIconId = `day${index + 1}-icon`;
+          const dayTempId = `day${index + 1}-temp`;
+
+          document.getElementById(dayDateId).innerHTML = new Date(day.date).toLocaleDateString('en-US', { weekday: 'short' });
+          document.getElementById(dayIconId).src = day.day.condition.icon;
+          document.getElementById(dayIconId).alt = day.day.condition.text;
+          document.getElementById(dayTempId).innerHTML = `${day.day.avgtemp_c}°C`;
+        });
        
       })
       .catch(error => {
@@ -88,6 +128,7 @@ function browserLocation() {
 
             // Update HTML elements with weather data
             document.getElementById("MLocationName").innerHTML = data.location.name;
+            document.getElementById("Rehiontxt").innerHTML = data.location.region;
             document.getElementById("MTempValue").innerHTML = data.current.temp_c;
             document.getElementById("nowdateclocation").innerHTML = formattedDate;
             document.getElementById("nowtimeclocation").innerHTML = formattedTime;
@@ -137,16 +178,10 @@ function browserLocation() {
     });
   }
 
-  // Dismiss alert banner
-  const dismissBtn = document.querySelector('.dismiss-btn');
-  const alertBanner = document.querySelector('.alert-banner');
-
-  dismissBtn.addEventListener('click', () => {
-    alertBanner.style.display = 'none'; // Hide the alert banner
-  });
+  
 }
 
-// Call the function to get the location and display the map
+
 
 
 

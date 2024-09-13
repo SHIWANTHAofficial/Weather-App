@@ -29,9 +29,9 @@
       <div class="logo">WeatherSite</div>
     
       <nav>
-        <a href="#">Home</a>
-        <a href="#">Maps</a>
-        <a class="alertnav" href="#">Alerts</a>
+        <a href="#" onclick="location.reload()">Home</a>
+        <a href="#mapsok">Maps</a>
+        <a class="alertnav" href="#" onclick="showAlert()">Alerts</a>
       </nav>
     </div>
   </header>
@@ -50,7 +50,7 @@
       <div class="card-body">
         <div class="Seachbosandbutton">
           <input type="text" id="search" placeholder="Search for a city...">
-          <button type="submit" id="searchBtn" class="btn btn-light">Search</button>
+          <button type="submit" id="searchBtn" class="btn1 btn-light1">Search</button>
         </div>
        
         <img id="Mainwiconone" src="Img/img1.png" alt="Weather Icon" class="weather-icon mb-1">
@@ -89,8 +89,8 @@
 
     <!-- Header Section with Settings and Dark Mode Toggle -->
     <div class="d-flex justify-content-between align-items-center mt-4">
-      <section class="forecast">
-        <h1>WHETHERSA</h1>
+      <section class="hourly-forecast1">
+        <h1>FORECASTS</h1>
       </section> 
       
         <div class="d-flex align-items-center">
@@ -174,8 +174,8 @@
           <div class="highlight-icon">
               <i class="fas fa-sun fa-3x"></i>
           </div>
-          <h5>UV Index</h5>
-          <p>1 2 3 <span class="highlight-level">4</span> 5 6 7</p>
+          <h5>Region</h5>
+          <p >***  <span id="Rehiontxt" class="highlight-level">4</span> ***</p>
       </div>
 
       <!-- Wind Status Box -->
@@ -253,31 +253,31 @@
 
   <!-- Forecast Section -->
 
-  <section class="forecast">
+  <!-- <section class="forecast">
     <h3>Hourly Forecast</h3>
     <div class="hourly-forecast">
       <div class="hour">
-        <p>1 PM</p>
+        <p>1 PM</p> -->
         <!--  <img src="weather-icon.png" alt="Sunny">-->
-        <p>70°F</p>
-      </div>
+        <!-- <p>70°F</p>
+      </div> -->
       <!-- Repeat for each hour -->
-    </div>
+    <!-- </div> -->
 
-    <h3>Daily Forecast</h3>
+    <!-- <h3>Daily Forecast</h3>
     <div class="daily-forecast">
       <div class="day">
-        <p>Wednesday</p>
+        <p>Wednesday</p> -->
         <!--  <img src="weather-icon.png" alt="Cloudy"> -->
-        <p>High: 76°F / Low: 64°F</p>
+        <!-- <p>High: 76°F / Low: 64°F</p>
         <p>Precipitation: 10%</p>
-      </div>
+      </div> -->
       <!-- Repeat for each day -->
-    </div>
-  </section>
+    <!-- </div>
+  </section> -->
 
   <!-- Interactive Map Section -->
-  <section class="map">
+  <section id="mapsok" class="map">
     <h3>Interactive Weather Map</h3>
     <div id="map" style="height: 400px; width: 100%;">Map Placeholder</div>
   </section>
@@ -294,9 +294,9 @@
         <a href="#">Contact</a>
       </div>
       <div class="social-icons">
-       <!--  <a href="#"><img src="facebook-icon.png" alt="Facebook"></a> -->
-       <!--  <a href="#"><img src="twitter-icon.png" alt="Twitter"></a> -->
-        <!-- <a href="#"><img src="instagram-icon.png" alt="Instagram"></a> -->
+        <a href="https://www.facebook.com/people/Shiwantha-Prasad/100088610513417/?locale=et_EE" target="_blank"><img src="Img/facebook.jpg" alt="Facebook"></a>
+        <a href="https://github.com/SHIWANTHAofficial" target="_blank"><img src="Img/github.png" alt="GitHub"></a> 
+        <a href="https://www.instagram.com/shiwantha_prasad/" target="_blank"><img src="Img/inster.jpg" alt="Instagram"></a>
       </div>
     </div>
   </footer>
@@ -310,6 +310,26 @@
     <script src="./Sever/sever.js"></script>
 
    
+
+
+
+
+
+
+    <script>
+      // Dismiss alert banner
+      const dismissBtn = document.querySelector('.dismiss-btn');
+      const alertBanner = document.querySelector('.alert-banner');
+
+      dismissBtn.addEventListener('click', () => {
+          alertBanner.style.display = 'none'; // Hide the alert banner
+      });
+
+      // Function to show the alert banner again
+      function showAlert() {
+          alertBanner.style.display = 'flex'; // Show the alert banner again
+      }
+  </script>
 </body>
 
 </html>

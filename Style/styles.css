@@ -40,6 +40,14 @@ body {
     width: 300px;
     color: white;
   }
+
+  .btn-light1{
+    border-radius: 50px;
+    background-color: #e0e0e0;
+    margin-left: 10px;
+    width: 70px;
+    height: 30px;
+  }
   
   nav a {
     margin-left: 20px;
@@ -94,10 +102,19 @@ body {
       
   }
   
-  .light-mode {
+  .light-mode  {
       background-color: rgb(4, 4, 4) !important;
       color: white !important;
   }
+
+  .light-mode .hourly-forecast1 h1 {
+    color: black; /* Black text in light mode */
+}
+
+.dark-mode .hourly-forecast1 h1 {
+    color: white; /* White text in dark mode */
+}
+
 
   .Seachbosandbutton{
     display: flex;
@@ -328,3 +345,6 @@ display: flex;
     margin: 0 10px;
   }
   
+  html {
+    scroll-behavior: smooth;
+  }
